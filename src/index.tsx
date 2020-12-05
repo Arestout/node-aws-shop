@@ -18,13 +18,13 @@ axios.interceptors.response.use(
 
       switch (status) {
         case 400:
-          alert(error.response.data?.data);
+          alert(`401 ${error.response.data?.data}`);
           break;
         case 401:
-          alert(error.response.data?.message);
+          alert(`401 ${error.response.data?.message}`);
           break;
         case 403:
-          alert(error.response.data?.message);
+          alert(`403 ${error.response.data?.message}`);
           break;
       }
     }
